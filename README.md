@@ -1,4 +1,4 @@
 it is a test
 
-
-i change in B2
+<<<<<<< HEAD
+>>>>>>> C4
