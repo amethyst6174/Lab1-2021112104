@@ -1,4 +1,2 @@
 it is a test
-
-<<<<<<< HEAD
->>>>>>> C4
+change again and again
