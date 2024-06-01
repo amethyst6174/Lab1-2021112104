@@ -1,0 +1,25 @@
+digraph {
+	graph [ "ui.stylesheet"="node { size: 20px; text-size: 12px; fill-color: black; } edge { text-size: 10px; fill-color: black; } edge.highlighted { fill-color: green; }" ];
+	"new" ;
+	"worlds" ;
+	"civilizations" ;
+	"life" ;
+	"to" ;
+	"explore" ;
+	"strange" ;
+	"and" ;
+	"seek" ;
+	"out" ;
+	"new" -> "worlds" ["color"="green","label"="1"];
+	"new" -> "civilizations" ["label"="1"];
+	"new" -> "life" ["label"="1"];
+	"worlds" -> "to" ["color"="green","label"="1"];
+	"explore" -> "strange" ["label"="1"];
+	"and" -> "new" ["label"="1"];
+	"to" -> "explore" ["label"="1"];
+	"to" -> "seek" ["color"="green","label"="1"];
+	"seek" -> "out" ["label"="1"];
+	"strange" -> "new" ["label"="1"];
+	"life" -> "and" ["label"="1"];
+	"out" -> "new" ["label"="1"];
+}
