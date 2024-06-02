@@ -383,7 +383,8 @@ public class TextToGraph {
                     directedGraph.addNode(target);
                 }
                 Edge edge = directedGraph.addEdge(source + "_" + target, source, target, true);
-                if (Arrays.asList(words).contains(source) && Arrays.asList(words).contains(target)){
+                List <String> wordlist = Arrays.asList(words);
+                if (wordlist.contains(source) && wordlist.contains(target) && (wordlist.indexOf(target)-wordlist.indexOf(source)==1)){
                     edge.setAttribute("color", "green");
                 }
 
@@ -444,10 +445,10 @@ public class TextToGraph {
                     directedGraph.addNode(target);
                 }
                 Edge edge = directedGraph.addEdge(source + "_" + target, source, target, true);
-                if (Arrays.asList(words).contains(source) && Arrays.asList(words).contains(target)){
+                List <String> wordlist = Arrays.asList(words);
+                if (wordlist.contains(source) && wordlist.contains(target) && ((wordlist.indexOf(target)-wordlist.indexOf(source))==1 ||  Collections.frequency(wordlist, target)==2)){
                     edge.setAttribute("color", "green");
                 }
-
                 edge.setAttribute("label", String.valueOf(weight));
             }
         }
